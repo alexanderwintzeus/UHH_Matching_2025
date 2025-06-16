@@ -2,6 +2,9 @@
 ### Assignment on Matching Models ###
 #####################################
 
+# Set working directory
+setwd("C:/Users/u0131511/Documents/PhD_AlexanderWintzéus/Teaching/UHH_Matching/4_Assignment/DataCode")
+
 # Import Packages
 if (!require("affinitymatrix")) install.packages("affinitymatrix")
 library(affinitymatrix)
