@@ -91,13 +91,19 @@ Nc = nrow(couples)
 share_f = (q_couples_w)/(Nc)
 share_m = (q_couples_h)/(Nc)
 
-# Vector of assortative matches according to random matching
-R = share_m * share_f
+# Matrix of random matches (as a share of total number of matches)
+R <- outer(share_m, share_f,"*")
 print(R)
 
-# Vector of observed assortative matches
-O = diag(q_couples)/(Nc)
+# Vector of assortative matches according to random matching
+print(diag(R))
+
+# Matrix of observed matches (as a share of total number of matches)
+O = q_couples/Nc
 print(O)
+ 
+# Vector of observed assortative matches
+print(diag(O))
 
 # Clearly, for any pair of education levels, there are more observed assortative
 # matches than implied by random matching based on the product of the marginal
